@@ -98,8 +98,8 @@
 <body>
     <h1>黑店</h1>
     <h2>小黑是店長</h2>
-    <p>嗨，我是一隻黑狗，朋友們都叫我「小黑」！醫生說我現在大約有7到8個月大了，活潑好動又充滿精力。我的毛色全黑，閃著健康的光澤，鼻子濕濕的，耳朵靈敏，還有一對充滿好奇的圓眼睛，總是注意著周圍的一切。</p>
-
+    <p>嗨，我是一隻黑狗，朋友們都叫我「小黑」！</p>
+    <p>醫生說我現在大約有7到8個月大了，活潑好動又充滿精力，我的毛色全黑，閃著健康的亮黑色，鼻子濕濕的，耳朵靈敏，還有一對充滿好奇的圓眼睛，總是注意著周圍的一切。</p>
     <h3>自我介紹</h3>
     <h4>我是所有人的夢中情狗</h4>
     <img src="./IMG_5929.JPG" height="450" width="330" alt="小黑的照片">
@@ -113,8 +113,8 @@
         <li>不怕打針</li>
         <li>跟主人分開不開心</li>
         <li>愛乾淨</li>
-        <li>對人不護食, 對同類夾著尾巴也要吵</li>
-        <li>拍照不支援黑狗自動對焦，朦朧美出圖</li>
+        <li>對人不護食, 對同類夾著尾巴 也要吵</li>
+       
     </ul>
 
     <p>小黑的成就風雲榜</p>
@@ -137,6 +137,7 @@
     <!--相簿超連結-->
     
     <a href="小黑的相簿.html">小黑的生活照</a>
+    <a href="虎斑.html">小黑的好朋友</a>
 
 
    
@@ -156,6 +157,7 @@
 
     <!-- 影片區域 -->
      <a href="養狗很讚.html">養狗很讚</a>
+     <a href="https://www.youtube.com/channel/UC5QMsuJ5b9ZatOufHE26doA">黑汪汪Youtube</a> 
     
      <!-- 第二段 -->
      <div class="highlight-section">
@@ -166,7 +168,63 @@
         <label>
             <input type="radio" name="無獎徵答1" value="no"> 超喜歡
         </label>
-    </div>
+        
+
+        <h1>小黑的趣味問卷</h1>
+    
+        <!-- 問卷區域 -->
+        <div class="quiz-container">
+            <div class="question">
+                小黑最喜歡的事情是什麼？
+            </div>
+            <div class="options">
+                <label><input type="radio" name="question1" value="撒嬌"> 撒嬌</label>
+                <label><input type="radio" name="question1" value="搶食物"> 搶食物</label>
+                <label><input type="radio" name="question1" value="咬牽引繩"> 咬牽引繩</label>
+            </div>
+    
+            <div class="question">
+                小黑最害怕的是什麼？
+            </div>
+            <div class="options">
+                <label><input type="radio" name="question2" value="洗澡"> 洗澡</label>
+                <label><input type="radio" name="question2" value="主人出門"> 主人出門</label>
+                <label><input type="radio" name="question2" value="打針"> 打針</label>
+            </div>
+    
+            <!-- 提交按鈕 -->
+            <button class="submit-button" id="submitAnswer">提交答案</button>
+            <div class="result" id="result"></div>
+        </div>
+    
+        <script>
+            // 提交答案函數
+            document.getElementById("submitAnswer").addEventListener("click", function checkAnswers() {
+                // 取得使用者的答案
+                const question1 = document.querySelector('input[name="question1"]:checked');
+                const question2 = document.querySelector('input[name="question2"]:checked');
+    
+                // 檢查是否未作答
+                if (!question1 || !question2) {
+                    document.getElementById('result').innerText = "請回答所有問題！";
+                    return;
+                }
+    
+                // 計算分數
+                let score = 0;
+                if (question1.value === "撒嬌") score++;
+                if (question2.value === "洗澡") score++;
+    
+                // 顯示結果
+                const resultText = score === 2
+                    ? "🎉 你對小黑超了解！滿分！"
+                    : score === 1
+                    ? "😊 你還需要多了解小黑喔，加油！"
+                    : "😅 小黑說你應該再來玩多幾次！";
+                document.getElementById('result').innerText = resultText;
+            });
+        
+
 
       
     </script>
