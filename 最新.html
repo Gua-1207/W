@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旺旺汪 - 小黑的相簿</title>
+    <style>
+        /* 背景設置 */
+        body {
+            background-image: url('./粉色背景.jpg');
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* 相簿區域設置 */
+        .cards {
+            display: none; /* 預設隱藏相簿 */
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .cards img {
+            max-width: 23vw;
+            border: 3px solid #000;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+            margin: 10px;
+        }
+
+        /* 標題和描述樣式 */
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        /* 清單樣式 */
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: left;
+            max-width: 300px;
+            margin: 0 auto;
+            color: #444;
+        }
+
+        /* 音樂控制樣式 - 右側固定 */
+        audio {
+            position: fixed;
+            right: 10px;
+            top: 50px;
+            transform: translateY(-50%);
+            margin-top: 20px;
+        }
+
+        /* 按鈕樣式 */
+        .view-gallery-button,
+        .view-video-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px auto;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* 背景區域樣式 */
+        .highlight-section {
+            background-color: lemonchiffon;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* 影片區域 */
+        .video-container {
+            display: none; /* 預設隱藏影片 */
+            margin-top: 20px;
+        }
+
+        video {
+            width: 80%;
+            border: 3px solid #000;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>黑店</h1>
+    <h2>小黑是店長</h2>
+    <p>嗨，我是一隻黑狗，朋友們都叫我「小黑」！</p>
+    <p>醫生說我現在大約有7到8個月大了，活潑好動又充滿精力，我的毛色全黑，閃著健康的亮黑色，鼻子濕濕的，耳朵靈敏，還有一對充滿好奇的圓眼睛，總是注意著周圍的一切。</p>
+    <h3>自我介紹</h3>
+    <h4>我是所有人的夢中情狗</h4>
+    <img src="./IMG_5929.JPG" height="450" width="330" alt="小黑的照片">
+    
+    <p>魅力值</p>
+    <ul>
+        <li>撒嬌第一名</li>
+        <li>很親人</li>
+        <li>活潑</li>
+        <li>愛吃零食</li>
+        <li>不怕打針</li>
+        <li>跟主人分開不開心</li>
+        <li>愛乾淨</li>
+        <li>對人不護食, 對同類夾著尾巴 也要吵</li>
+       
+    </ul>
+
+    <p>小黑的成就風雲榜</p>
+    <ul>
+        <li>不坐機車前座, 在後座只想跳車</li>
+        <li>把定位器咬掉</li>
+        <li>把房東的墊子、紙箱咬稀爛</li>
+        <li>咬斷第一根牽引繩</li>
+        <li>吃飽了還要去對面鄰居跟別的狗搶食物</li>
+        <li>洗澡是世紀大戰</li>
+    </ul>
+
+   
+    
+    <!-- 音樂播放器 - 固定在右側 -->
+    <audio controls>
+        <source src="./happy-piano-music-250821.mp3" type="audio/mpeg">
+        您的瀏覽器不支援 audio 元素。
+    </audio>
+    <!--相簿超連結-->
+    
+    <a href="小黑的相簿.html">小黑的生活照</a>
+    <a href="虎斑.html">小黑的好朋友</a>
+
+
+   
+    <!-- 相簿主區域 -->
+    <main class="cards" id="photoGallery">
+        <img src="./IMG_5666.JPG" alt="Sample photo">
+        <img src="./IMG_5673.JPG" alt="Sample photo">
+        <img src="./AYAU7526.JPG" alt="Sample photo">
+        <img src="./IMG_5639.JPG" alt="Sample photo">
+        <img src="./GDAB1194.JPG" alt="Sample photo">
+        <img src="./IMG_5700.JPG" alt="Sample photo">
+        <img src="./IMG_5732.JPG" alt="Sample photo">
+        <img src="./IMG_5875.JPG" alt="Sample photo">
+        <img src="./IMG_6052.JPG" alt="Sample photo">
+        <img src="./IMG_5639.JPG" alt="Sample photo">
+    </main>
+
+    <!-- 影片區域 -->
+     <a href="養狗很讚.html">養狗很讚</a>
+     <a href="https://www.youtube.com/channel/UC5QMsuJ5b9ZatOufHE26doA">黑汪汪Youtube</a> 
+    
+     <!-- 第二段 -->
+     <div class="highlight-section">
+        <p>喜歡小黑嗎?</p>
+        <label>
+            <input type="radio" name="無獎徵答1" value="yes"> 喜歡
+        </label>
+        <label>
+            <input type="radio" name="無獎徵答1" value="no"> 超喜歡
+        </label>
+        
+
+        <h1>小黑的趣味問卷</h1>
+    
+        <!-- 問卷區域 -->
+        <div class="quiz-container">
+            <div class="question">
+                小黑最喜歡的事情是什麼？
+            </div>
+            <div class="options">
+                <label><input type="radio" name="question1" value="撒嬌"> 撒嬌</label>
+                <label><input type="radio" name="question1" value="搶食物"> 搶食物</label>
+                <label><input type="radio" name="question1" value="咬牽引繩"> 咬牽引繩</label>
+            </div>
+    
+            <div class="question">
+                小黑最害怕的是什麼？
+            </div>
+            <div class="options">
+                <label><input type="radio" name="question2" value="洗澡"> 洗澡</label>
+                <label><input type="radio" name="question2" value="主人出門"> 主人出門</label>
+                <label><input type="radio" name="question2" value="打針"> 打針</label>
+            </div>
+    
+            <!-- 提交按鈕 -->
+            <button class="submit-button" id="submitAnswer">提交答案</button>
+            <div class="result" id="result"></div>
+        </div>
+    
+        <script>
+            // 提交答案函數
+            document.getElementById("submitAnswer").addEventListener("click", function checkAnswers() {
+                // 取得使用者的答案
+                const question1 = document.querySelector('input[name="question1"]:checked');
+                const question2 = document.querySelector('input[name="question2"]:checked');
+    
+                // 檢查是否未作答
+                if (!question1 || !question2) {
+                    document.getElementById('result').innerText = "請回答所有問題！";
+                    return;
+                }
+    
+                // 計算分數
+                let score = 0;
+                if (question1.value === "撒嬌") score++;
+                if (question2.value === "洗澡") score++;
+    
+                // 顯示結果
+                const resultText = score === 2
+                    ? "🎉 你對小黑超了解！滿分！"
+                    : score === 1
+                    ? "😊 你還需要多了解小黑喔，加油！"
+                    : "😅 小黑說你應該再來玩多幾次！";
+                document.getElementById('result').innerText = resultText;
+            });
+        
+
+
+      
+    </script>
+</body>
+</html>
+
